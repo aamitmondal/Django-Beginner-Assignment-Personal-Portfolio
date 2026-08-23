@@ -1,0 +1,81 @@
+{% extends 'portfolio/base.html' %}
+
+{% load static %}
+
+{% block title %}
+Home | Amit Mondal
+{% endblock %}
+
+
+{% block content %}
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <img
+            src="{% static 'portfolio/images/profile.jpg' %}"
+            alt="Amit Mondal"
+            class="profile-image"
+        >
+
+        <h1>
+            Hello, I'm Amit Mondal
+        </h1>
+
+        <h2>
+            Python & Django Developer
+        </h2>
+
+        <p>
+            I am a beginner web developer learning
+            Python, Django, HTML, CSS and SQL.
+            I enjoy building simple and useful
+            web applications.
+        </p>
+
+        <a href="{% url 'projects' %}"
+           class="btn">
+            View My Projects
+        </a>
+
+    </div>
+
+</section>
+
+
+<section class="skills container">
+
+    <h2>My Skills</h2>
+
+    <div class="skill-list">
+
+        <span>Python</span>
+        <span>Django</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>SQL</span>
+        <span>Git & GitHub</span>
+
+    </div>
+
+</section>
+
+
+<section class="contact container">
+
+    <h2>Contact Me</h2>
+
+    <p>
+        Interested in working with me?
+        Feel free to contact me.
+    </p>
+
+    <a href="mailto:aamit.ru@gmail.com"
+       class="btn">
+        Contact Me
+    </a>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'portfolio/base.html' %}
+
+
+{% block title %}
+{{ project.title }} | Amit Mondal
+{% endblock %}
+
+
+{% block content %}
+
+<section class="container page-section">
+
+    <div class="project-detail">
+
+        <h1>
+            {{ project.title }}
+        </h1>
+
+        <p>
+            {{ project.description }}
+        </p>
+
+        <h3>
+            Technology Used
+        </h3>
+
+        <p>
+            {{ project.technology }}
+        </p>
+
+        <div>
+
+            <a
+                href="{{ project.github_link }}"
+                target="_blank"
+                class="btn"
+            >
+                View on GitHub
+            </a>
+
+            <a
+                href="{% url 'projects' %}"
+                class="btn secondary-btn"
+            >
+                Back to Projects
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
